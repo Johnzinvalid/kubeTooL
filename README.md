@@ -19,18 +19,20 @@ home directory
 users:
 - name: DOCuser
   user:
-    username: DOC-login
-    password: Your-password
+    username: DOC login
+    password: YourSECRETpassword
+...
+- context:
+    cluster: cluster-sslskip
+    namespace: DoC login
 ```
-change the username and password to your DoC login and password, save
-and exit.
+change the username and password to your DoC login and password,
+change the namespace into your login also then save and exit.
 
 Now you can try the command `kubectl get nodes` to check, if it shows
 like following then you are ready to go:
 
 ```
 NAME             STATUS    AGE
-145.169.45.205   Ready     5d
-146.169.45.206   Ready     19d
-146.169.45.207   Ready     19d
-```
+146.169.45.206   Ready     33d
+146.169.45.207   Ready     33d
