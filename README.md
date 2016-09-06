@@ -1,18 +1,24 @@
 # How to use
 
-### clone this repository to your home directory
+### Clone this repository to your home directory
 
 ```
-cd ~
 git clone https://github.com/Johnzinvalid/kubeTooL.git
-cd kube-tool
+cd kubeTooL
 cp -r .kube ~/.kube
 ```
 The corresponding command line tool kubectl is inside one of the three
-folders: _win_, _macOS_, _linux_. add the proper one to your $PATH by edit .bashrc
-or .bash_profile.
+folders: _win_, _macOS_, _linux_. add the proper one to your $PATH by
+edit .bashrc or .bash_profile.
 
-### add your password to config file under .kube
+**Dont forget to use absolute path.**
+
+For Example:
+```
+export PATH=$PATH:path_to/kubeTooL/corresponding_OS
+source .bashrc (or .bash_profile)
+```
+### Add your password to config file under .kube
 use your favorite editor to edit the file _config_ in .kube under your
 home directory
 ```
@@ -26,7 +32,7 @@ users:
     cluster: cluster-sslskip
     namespace: DoC login
 ```
-change the username and password to your DoC login and password,
+change the username and password to your DoC login and password,<br>
 change the namespace into your login also then save and exit.
 
 Now you can try the command `kubectl get nodes` to check, if it shows
